@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaartenuitverkoop - ’t Kijkhuis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="kaartverkoop-page">
+
+  <header>
+    <img src="foto/logo_kijkhuis.png" alt="Logo t' Kijkhuis" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="programma.html">Programma</a></li>
+        <li><a href="kaarten.html">Kaartverkoop</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="app-link">Download de App</a>
+  </header>
+
+  <main class="kaarten-content">
+    <h1 class="pagina-titel">Koop je kaartjes 🎟️</h1>
+    <p class="intro">Reserveer eenvoudig je plek voor een film naar keuze. Kies een film, selecteer de datum en tijd, en betaal veilig online.</p>
+
+    <section class="verkoop-formulier">
+      <form>
+        <label for="film">Film:</label>
+        <select id="film" name="film">
+          <option value="horror">Horror: The Showmovie</option>
+          <option value="travel">Travel</option>
+          <!-- Voeg meer films toe -->
+        </select>
+
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" name="datum" required>
+
+        <label for="tijd">Tijd:</label>
+        <select id="tijd" name="tijd">
+          <option value="18:00">18:00</option>
+          <option value="20:30">20:30</option>
+          <option value="22:00">22:00</option>
+          <option value="18:00">23:30</option>
+        </select>
+
+        <label for="aantal">Aantal Kaartjes:</label>
+        <input type="number" id="aantal" name="aantal" min="1" max="10" required>
+
+        <button type="submit" class="btn">Reserveer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 ’t Kijkhuis | Volg ons op sociale media | <a href="app.html">Download de app</a></p>
+  </footer>
+
+</body>
+</html>

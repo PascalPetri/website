@@ -1,0 +1,576 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url('foto/stylescape_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white; /* optioneel, zodat tekst goed leesbaar blijft */
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  width: 100%;
+  background: #0d2b56;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+
+}
+
+nav a, .app-link {
+  color: #fff8e1;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 90px;
+}
+
+.app-link {
+  background: #fefcf9;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #0d2b56;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.4em;
+  margin-bottom: 30px;
+}
+
+.cta-buttons .btn {
+  margin: 10px;
+  padding: 12px 24px;
+  background: #fefefe;
+  color: #f1f1f3;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.cta-buttons .btn:hover {
+  background: #d8b56e;
+}
+
+/* VASTE HEADER */
+header {
+  background-color: rgba(13, 43, 86, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Zorg dat je pagina-inhoud niet onder de header verdwijnt */
+.kaarten-content {
+  margin-top: 120px; /* ruimte onder vaste header */
+  margin-bottom: 80px; /* ruimte boven vaste footer */
+  padding: 20px;
+  text-align: center;
+}
+
+/* VASTE FOOTER */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0d2b56;
+  color: #fff8e1;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* Houdt ruimte voor vaste footer/header */
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  color: #fff8e1;
+  background-color: rgba(13, 43, 86, 0.85); /* eventueel semi-transparant blauw */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(192, 160, 96, 0.3);
+  max-width: 800px;
+}
+
+.cta-buttons {
+  margin-top: 25px;
+}
+
+.cta-buttons .btn {
+  background-color: #fefdfa;
+  color: #0d2b56;
+  padding: 12px 25px;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  background-color: #d8b56e;
+}
+
+/* Achtergrond en basis body styling */
+body.programmapage {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: url('foto/stylescape_1.png') no-repeat center center/cover;
+  color: #fff8e1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overlay voor donkere tint */
+body.programmapage::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+
+/* Container voor inhoud */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 3px solid #c0a060; /* goud */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #c0a060;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #fff8e1;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #c0a060;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #c0a060;
+  border-radius: 3px;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px #102c5c;
+  color: #c0a060;
+}
+
+.main-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Films lijst */
+.film-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+
+.programma-intro {
+  text-align: center;
+  padding: 60px 20px 30px;
+  color: #fff8e1;
+}
+
+.programma-intro h1 {
+  font-size: 2.8em;
+  color: #f7f3f3;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.programma-intro p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Film kaarten */
+.film-card {
+  background-color: rgba(16, 44, 92, 0.85);
+  border: 3px solid #c0a060;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(192, 160, 96, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.film-card:hover {
+  transform: scale(1.05);
+}
+
+.film-card img {
+  width: auto;           /* Laat breedte variëren */
+  max-width: 90%;        /* Maximaal 80% van de kaartbreedte */
+  max-height: 400px;     /* Max 200px hoog */
+  margin: 0 auto;        /* Centreren horizontaal */
+  display: block;
+  border-bottom: 3px solid #c0a060;
+}
+
+
+.film-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.film-info h2 {
+  margin: 0 0 15px;
+  color: #eeecea;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #102c5c;
+}
+
+.film-info p {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #fff8e1;
+}
+
+/* Button */
+.btn {
+  background-color: #fefdfb;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0d2b56;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn:hover {
+  background-color: #d8b56e;
+}
+
+/* Footer */
+.footer {
+  background-color: #102c5c;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 3px solid #c0a060;
+  font-size: 0.9rem;
+  color: #fff8e1;
+  margin-top: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .main-content h1 {
+    font-size: 2.2rem;
+  }
+  nav a {
+    font-size: 1rem;
+    margin-left: 15px;
+  }
+  .film-info h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.kaartverkoop-page {
+  color: #fff;
+  font-family: 'Georgia', serif;
+  padding: 40px 20px;
+}
+
+.pagina-titel {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #faf9f6;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+.verkoop-formulier {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(16, 44, 92, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(192, 160, 96, 0.4);
+}
+
+.verkoop-formulier label {
+  display: block;
+  margin-top: 15px;
+  color: #fff8e1;
+}
+
+.verkoop-formulier input,
+.verkoop-formulier select {
+  width: 500px;         /* vaste breedte voor consistentie */
+  padding: 10px;
+  border: none;
+  margin-top: 5px;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+
+.verkoop-formulier .btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #0d2b56;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.workshop-lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.workshop-card {
+  display: flex;
+  flex-direction: row;
+  background-color:#0d2b56;
+  border: 2px solid #c0a060;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 700px;        /* vaste breedte */
+  height: 200px;       /* vaste hoogte */
+  box-shadow: 0 0 10px rgba(192, 160, 96, 0.3);
+  align-items: center; /* tekst en afbeelding verticaal gecentreerd */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.workshop-afbeelding {
+  width: 35%;          /* ongeveer 1/3 van de kaart */
+  height: 100%;        /* vult de volledige hoogte van de kaart */
+  object-fit: cover;   /* zorgt dat de afbeelding mooi uitsnijdt zonder vervorming */
+  flex-shrink: 0;      /* voorkomt dat afbeelding krimpt */
+}
+
+.workshop-info {
+  padding: 20px;
+  flex: 1;
+  color: #fff8e1;
+  height: 100%;        /* zorgt dat tekstblok even hoog is */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* tekst verticaal centreren in info */
+}
+
+
+.workshop-info h2 {
+  margin-top: 0;
+  color: #fcfcfc;
+}
+
+body.info-page {
+  font-family: 'Georgia', serif;
+  background: url('foto/stylescape_1.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #4a4a4a;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-content {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background-color: #0d2b56; 
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(192, 160, 96, 0.2);
+  color: #f6f6f6;
+}
+
+.pagina-titel {
+  font-size: 2.6em;
+  color: #fcf9f9; /* goudachtige kleur */
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #e4d7a0;
+}
+
+.info-section {
+  margin-top: 25px;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.info-section h2 {
+  color: #f7f6f4;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+
+.info-section ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #fbfbfb;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f0e6b9; /* lichte gouden tint */
+  color: #a67c00;
+  font-size: 0.9em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.info-section {
+  margin-top: 25px;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.info-section h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #102c5c;
+}
+
+.info-section ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #102c5c;
+  color: #f9f9f9;
+  font-size: 0.9em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
